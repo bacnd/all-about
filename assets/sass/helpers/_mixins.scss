@@ -308,7 +308,7 @@
     }
 }
 
-@include dlflexcenter {
+@mixin dlflexcenter {
     display: flex;
     align-items: center;
     justify-content: center;
