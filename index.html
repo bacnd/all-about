@@ -54,9 +54,7 @@
                         <div class="fv-main__caption">
                             <div class="main-caption__inner">
                                 <img src="assets/images/top/logo_light.png" alt="Wander Tokyo & Around Tokyo" class="fv-caption__img" />
-                                <p class="fv-caption__txt">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
+                                <p class="fv-caption__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
                             </div>
                         </div>
                     </div>
@@ -187,6 +185,7 @@
                                 </div>
                                 <p class="gallery__txt">自治体の名前</p>
                             </li>
+                            <p class="gallery__see-more dl-sp"><span>See More</span></p>
                         </ul>
                     </div>
                 </section>
@@ -197,6 +196,7 @@
                             <div class="map-japan">
                                 <div class="map-full">
                                     <figure class="map-small"><img src="assets/images/top/map_small.svg" alt="map" /></figure>
+                                    <img src="assets/images/top/map-area-sp.png" usemap="#image-map-sp" id="image-map-sp" class="dl-sp" />
                                     <p class="map__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
                                 </div>
                                 <ul class="areas__list">
@@ -215,7 +215,6 @@
                             </div>
                             <div class="map-area">
                                 <img src="assets/images/top/map-area.png" usemap="#image-map" id="image-map" class="dl-pc" />
-                                <img src="assets/images/top/map-area-sp.png" usemap="#image-map-sp" id="image-map-sp" class="dl-sp" />
                                 <map name="image-map">
                                     <area data-area="tokyo" target="" alt="" title="" href="" coords="463,482,470,486,474,474,471,464,464,461,460,464,413,465,403,459,390,456,383,454,374,450,369,450,366,453,365,456,370,470,385,479,397,491,414,491,427,504,426,489,445,489,452,499,457,501" shape="poly" />
                                     <area data-area="kanagawa" target="" alt="" title="" href="" coords="383,557,390,541,403,534,415,531,432,532,439,541,441,552,444,556,446,548,452,543,451,537,443,532,448,529,442,523,445,510,454,507,457,501,452,500,445,490,425,489,427,504,415,493,397,492,384,479,382,502,368,509,358,518,366,519,373,527,369,536,371,544,377,553,383,556" shape="poly" />
@@ -279,6 +278,16 @@
                                 </map>
                                 <map name="image-map-sp">
                                     <area
+                                        data-area="fukushima"
+                                        target=""
+                                        alt=""
+                                        title=""
+                                        href=""
+                                        coords="433,164,449,166,471,166,481,178,491,172,502,174,508,180,530,181,538,168,529,160,532,153,533,130,544,136,565,135,569,141,606,149,607,162,621,173,634,168,638,144,651,149,662,170,671,262,664,283,664,320,659,350,645,361,626,370,622,379,598,371,583,371,586,378,575,382,567,395,552,387,552,379,540,368,525,364,526,348,502,325,480,319,458,321,440,331,409,344,385,356,369,367,346,355,347,315,343,303,333,296,344,269,339,257,343,248,364,248,381,237,390,240,405,236,401,200,415,197,421,177,430,172"
+                                        shape="poly"
+                                    />
+                                    <area
+                                        data-area="niigata"
                                         target=""
                                         alt=""
                                         title=""
@@ -287,6 +296,7 @@
                                         shape="poly"
                                     />
                                     <area
+                                        data-area="nagano"
                                         target=""
                                         alt=""
                                         title=""
@@ -294,12 +304,12 @@
                                         coords="82,402,77,400,78,441,65,445,66,458,49,487,56,496,57,507,45,525,46,536,39,551,49,559,38,579,29,598,13,597,1,615,6,620,24,627,30,642,37,649,33,657,40,673,50,677,55,685,49,690,54,701,45,709,49,716,39,733,45,749,70,737,89,745,132,720,141,716,147,703,147,684,150,667,161,651,153,637,163,623,156,614,165,601,174,600,186,584,202,584,204,593,210,593,216,591,231,593,236,602,243,603,256,587,241,569,235,548,226,539,234,529,232,507,239,504,238,480,218,483,205,482,193,476,194,456,200,437,214,427,218,415,242,405,241,382,228,372,228,353,206,347,184,360,171,386,141,383,128,394,124,384,128,375,119,370,102,366,90,394"
                                         shape="poly"
                                     />
-                                    <area target="" alt="" title="" href="" coords="218,749,204,757,195,747,186,725,172,724,163,711,166,701,167,680,165,657,160,653,152,639,162,623,155,614,164,601,174,601,185,584,201,585,203,594,209,594,216,592,231,594,237,603,242,603,251,593,265,604,272,602,281,611,294,609,300,629,310,637,324,645,322,679,306,688,287,702,280,705,271,709,250,715,242,709,231,706,230,701,222,699,212,728,217,738" shape="poly" />
-                                    <area target="" alt="" title="" href="" coords="282,705,298,707,305,719,300,736,304,751,311,762,321,765,333,742,350,731,371,725,386,726,398,727,410,743,411,752,412,761,422,765,421,752,431,745,431,737,421,729,417,724,424,722,416,712,420,691,434,689,442,682,440,674,428,671,419,660,389,658,391,681,371,665,344,664,324,645,321,679,304,688,286,702" shape="poly" />
-                                    <area target="" alt="" title="" href="" coords="298,599,293,608,299,629,310,637,324,645,344,664,371,665,391,682,390,660,420,660,428,673,439,675,449,651,459,657,465,636,460,627,460,621,449,617,441,621,423,620,398,621,370,622,352,612,324,605,307,599" shape="poly" />
-                                    <area target="" alt="" title="" href="" coords="251,578,249,580,255,587,251,591,264,602,270,601,281,610,293,607,297,598,307,598,324,604,351,611,369,621,400,619,440,619,449,616,460,621,464,604,455,583,448,570,445,558,433,553,427,541,427,526,420,527,397,524,394,529,385,529,364,517,359,522,323,510,311,540,295,550,278,549,276,562,265,568,257,564,252,568" shape="poly" />
-                                    <area target="" alt="" title="" href="" coords="" shape="poly" />
+                                    <area data-area="yamanashi" target="" alt="" title="" href="" coords="218,749,204,757,195,747,186,725,172,724,163,711,166,701,167,680,165,657,160,653,152,639,162,623,155,614,164,601,174,601,185,584,201,585,203,594,209,594,216,592,231,594,237,603,242,603,251,593,265,604,272,602,281,611,294,609,300,629,310,637,324,645,322,679,306,688,287,702,280,705,271,709,250,715,242,709,231,706,230,701,222,699,212,728,217,738" shape="poly" />
+                                    <area data-area="kanagawa" target="" alt="" title="" href="" coords="282,705,298,707,305,719,300,736,304,751,311,762,321,765,333,742,350,731,371,725,386,726,398,727,410,743,411,752,412,761,422,765,421,752,431,745,431,737,421,729,417,724,424,722,416,712,420,691,434,689,442,682,440,674,428,671,419,660,389,658,391,681,371,665,344,664,324,645,321,679,304,688,286,702" shape="poly" />
+                                    <area data-area="tokyo" target="" alt="" title="" href="" coords="298,599,293,608,299,629,310,637,324,645,344,664,371,665,391,682,390,660,420,660,428,673,439,675,449,651,459,657,465,636,460,627,460,621,449,617,441,621,423,620,398,621,370,622,352,612,324,605,307,599" shape="poly" />
+                                    <area data-area="saitama" target="" alt="" title="" href="" coords="249,580,251,579,251,569,257,564,265,568,275,563,278,550,294,551,310,542,324,512,360,523,364,518,385,530,394,530,397,525,412,527,423,527,427,527,427,542,432,553,446,559,447,569,457,587,464,604,460,621,449,617,441,620,399,620,370,622,352,612,325,605,309,599,298,598,293,609,281,611,272,602,264,603,250,593,255,587" shape="poly" />
                                     <area
+                                        data-area="gunma"
                                         target=""
                                         alt=""
                                         title=""
@@ -307,9 +317,18 @@
                                         coords="250,580,241,570,235,549,225,539,234,529,232,508,239,504,238,479,218,483,203,482,193,476,194,456,200,437,214,427,218,416,242,406,253,406,268,401,273,391,285,388,294,372,294,354,316,350,319,336,334,352,334,364,345,363,348,355,373,370,366,384,368,400,363,417,364,437,385,442,379,453,379,469,367,485,384,513,412,517,425,527,397,525,394,531,386,530,365,519,360,524,324,512,311,541,295,552,278,551,277,563,265,568,258,564,253,569,250,580"
                                         shape="poly"
                                     />
-                                    <area target="" alt="" title="" href="" coords="369,368,372,370,366,384,368,400,363,416,362,437,385,442,379,453,379,469,367,485,384,513,397,514,411,516,423,527,440,528,455,511,474,495,492,493,518,482,526,455,524,436,524,419,536,415,534,407,529,395,532,366,525,364,527,348,503,326,478,318,457,321,440,331,386,354,374,364" shape="poly" />
-                                    <area target="" alt="" title="" href="" coords="531,367,539,367,551,378,553,387,565,393,573,383,586,378,582,370,598,371,621,377,625,374,623,394,588,479,596,498,583,508,586,529,601,570,615,597,621,612,629,624,634,628,631,632,618,622,610,611,584,590,555,593,542,603,532,601,515,607,502,608,491,594,473,593,459,575,454,563,433,554,427,544,427,527,439,528,457,510,473,495,492,493,519,482,526,455,524,437,524,419,536,416,528,395,530,373" shape="poly" />
+                                    <area data-area="tochigi" target="" alt="" title="" href="" coords="369,368,372,370,366,384,368,400,363,416,362,437,385,442,379,453,379,469,367,485,384,513,397,514,411,516,423,527,440,528,455,511,474,495,492,493,518,482,526,455,524,436,524,419,536,415,534,407,529,395,532,366,525,364,527,348,503,326,478,318,457,321,440,331,386,354,374,364" shape="poly" />
                                     <area
+                                        data-area="ibaraki"
+                                        target=""
+                                        alt=""
+                                        title=""
+                                        href=""
+                                        coords="531,367,539,367,551,378,553,387,565,393,573,383,586,378,582,370,598,371,621,377,625,374,623,394,588,479,596,498,583,508,586,529,601,570,615,597,621,612,629,624,634,628,631,632,618,622,610,611,584,590,555,593,542,603,532,601,515,607,502,608,491,594,473,593,459,575,454,563,433,554,427,544,427,527,439,528,457,510,473,495,492,493,519,482,526,455,524,437,524,419,536,416,528,395,530,373"
+                                        shape="poly"
+                                    />
+                                    <area
+                                        data-area="chiba"
                                         target=""
                                         alt=""
                                         title=""
@@ -341,87 +360,90 @@
                             <a href="#"><img src="assets/images/logo-ft.svg" alt="logo footer" /></a>
                             <p class="copyright">Copyright © 2020<br class="dl-pc" />Japan National Tourism Organization</p>
                         </div>
-                        <div class="middle-ft dl-flex">
-                            <div class="menu-ft">
-                                <div class="menu-ft__title">Area</div>
-                                <ul>
-                                    <li>
-                                        <a href="#">Fukushima</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ibaraki</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tochigi</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Gunma</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Saitama</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Chiba</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tokyo</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Kanagawa</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Niigata</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Yamanashi</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Nagano</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-ft">
-                                <div class="menu-ft__title">Category</div>
-                                <ul>
-                                    <li>
-                                        <a href="#">Art & Culture</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">History</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Nature/Outdoor</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Food & Drink</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Relaxing Stay</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-ft">
-                                <div class="menu-ft__title">Model Course</div>
-                                <ul>
-                                    <li>
-                                        <a href="#">Model 01</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Model 02</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Model 03</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Model 04</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Model 05</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">more…</a>
-                                    </li>
-                                </ul>
+                        <div class="middle-ft">
+                            <div class="accordion-toggle dl-sp">Link List</div>
+                            <div class="middle-ft__inner dl-flex">
+                                <div class="menu-ft">
+                                    <div class="menu-ft__title">Area</div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Fukushima</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Ibaraki</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Tochigi</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Gunma</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Saitama</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Chiba</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Tokyo</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Kanagawa</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Niigata</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Yamanashi</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Nagano</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu-ft">
+                                    <div class="menu-ft__title">Category</div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art & Culture</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">History</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Nature/Outdoor</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Food & Drink</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Relaxing Stay</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu-ft">
+                                    <div class="menu-ft__title">Model Course</div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Model 01</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Model 02</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Model 03</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Model 04</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Model 05</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">more…</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="left-ft">
@@ -465,8 +487,8 @@
         </div>
         <!-- JS -->
         <script src="assets/js/jquery.min.js"></script>
-        <script src="https://dpesofficial.github.io/map/jquery.maphilight.js"></script>
-        <script src="https://dpesofficial.github.io/map/imageMapResizer.min.js"></script>
+        <script src="assets/js/jquery.maphilight.js"></script>
+        <script src="assets/js/imageMapResizer.min.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
 </html>
