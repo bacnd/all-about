@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-// get vw
-@function vw($target) {
-  $vw: (750 * 0.01) * 1px;
-  @return ($target / $vw) * 1vw;
-}
-
 // get vwl
 @function vwl($target) {
   $vw: (567 * 0.01) * 1px;
@@ -50,23 +44,11 @@
 }
 // cent(XXpx,XXpx);
 
-@function vw($target) {
-  $vw: (750 * 0.01) * 1px;
-  @return ($target / $vw) * 1vw;
-}
-// vw(XXpx);
-
 @function setvw($target, $sc) {
   $vw: ($sc * 0.01) * 1px;
   @return ($target / $vw) * 1vw;
 }
 // setvw(XXpx,XX);
-
-@mixin fontsize($size: 24, $base: 16) {
-  font-size: $size + px;
-  font-size: ($size / $base) * 1rem;
-}
-// @include fontsize(16);
 
 @mixin fs($size, $base: 10) {
   font-size: ($size / $base) * 1rem;
