@@ -1,5 +1,5 @@
 .container {
-  @media (max-width: 1080 + 30 +'px') {
+  @media (min-width: 769px) and (max-width: 1080 + 30 +'px') {
       max-width: 100%;
       @include plr(15px);
   }
@@ -9,7 +9,7 @@
   padding: 80px 0;
 
   @include max_768 {
-    padding: vw(80px) 0;
+    padding: vw(60px) 0;
   }
 }
 
@@ -19,7 +19,7 @@
   background-size: cover;
 
   &__inner {
-    height: 400px;
+    height: 370px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@
     font-size: 21px;
     font-weight: normal;
     line-height: 1.43;
-    color: #ffffff;
+    color: rgba(#ffffff,0.7);
     margin-top: 6px;
     text-align: center;
   }
@@ -52,7 +52,9 @@
       padding-top: vw(45px);
       padding-bottom: vw(45px);
     }
+  }
 
+  @media (max-width: 567px) {
     &__title {
       font-size: 35px;
       margin-bottom: vw(10px);
