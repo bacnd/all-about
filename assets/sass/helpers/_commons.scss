@@ -27,7 +27,7 @@ html:not(.lt-ie10) .not-animated {
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
-    @include fontsize(16);
+    font-size: 16px;
     line-height: 1.5;
     color: $clr-black;
     width: 100%;
