@@ -9,7 +9,7 @@ $(function () {
     });
 
     $('.btn-accept').click(function (e) {
-        $('.notification-cookies').hide();
+        $('.noti-cookies').hide();
     });
 
     var $area = $('area');

@@ -731,3 +731,60 @@
         }
     }
 }
+
+.noti-cookies {
+    background-color: #1d2087;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    .noti__inner {
+        align-items: center;
+        justify-content: space-between;
+        padding: vw(25px) 0;
+        @include min_769 {
+            padding: 19px 0;
+        }
+        p {
+            max-width: 860px;
+            width: 100%;
+            font-size: 21px;
+            line-height: 1.48;
+            @include resizefont(12px, 24px);
+            @include max_768 {
+                line-height: 1.25;
+                margin-right: vw(15px);
+                max-width: calc(100% - 20.8vw);
+            }
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+        .btn-accept {
+            width: vw(141px);
+            height: vw(72px);
+            border-radius: 50px;
+            background-color: #ffce00;
+            @include dlflex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 21px;
+            font-weight: bold;
+            @include resizefont(11.5px, 23px);
+            @include min_769 {
+                cursor: pointer;
+                width: 140px;
+                height: 60px;
+            }
+            &:hover {
+                opacity: 1;
+                background-color: #fff;
+                color: #ffce00;
+            }
+        }
+    }
+}
