@@ -1,6 +1,9 @@
 .page-fukushima {
   .fv-main-fuku {
-    background: url(../images/fukushima/fv_main.jpg) no-repeat top center / cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),  url(../images/fukushima/fv_main.jpg);
     padding: 63px 0;
 
     &__content {
@@ -48,21 +51,45 @@
     }
 
     @include max_768 {
-      background-image: url(../images/fukushima/fv_main.jpg);
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),  url(../images/fukushima/fv_main.jpg);
+      padding: vw(180px) 0;
+
+      &__content {
+        .b-thumb {
+          text-align: center;
+        }
+
+        .b-caption {
+          .b-title {
+            margin-bottom: 10px;
+
+            img {
+              height: 45px;
+            }
+            .page-title {
+              font-size: 50px;
+            }
+          }
+
+          .b-text {
+            font-size: 18px;
+          }
+        }
+      }
     }
   }
 }
 
 .fukushima-list {
-  .item {
-    .item-inner {
+  .article {
+    .article-inner {
 
-      @include min_769 {
+      @media (min-width: 768px) {
         display: flex;
         align-items: center;
       }
 
-      .item-gallery {
+      .article-gallery {
 
         @include min_769 {
           width: cent(540px, 1080px);
@@ -70,7 +97,11 @@
         }
 
         .slider-for {
-          margin-bottom: -138px;
+          margin-bottom: -135px;
+
+          @media (max-width: 1107px) {
+            margin-bottom: -25%;
+          }
 
           .slick-list {
             margin-bottom: -2px;
@@ -100,7 +131,45 @@
         }
       }
 
-      .item-content {
+      .article-gallery2 {
+
+        @media (min-width: 768px) {
+          width: cent(540px, 1080px);
+          margin-right: cent(40px, 1080px);
+        }
+
+        .gallery-photo {
+          margin-bottom: -135px;
+
+          @media (max-width: 1107px) {
+            margin-bottom: -25%;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .gallery-list {
+          position: relative;
+          background: #fff;
+          padding-top: 1px;
+          display: flex;
+          justify-content: space-between;
+          @include mlr(-0.5px);
+
+          .item {
+            width: calc(100% / 3);
+            @include plr(0.5px);
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .article-content {
         // width: calc();
         flex: 1;
 
@@ -115,7 +184,8 @@
           font-family: $font-primary;
           font-size: 45px;
           color: #1d2087;
-          margin-bottom: 10px;
+          margin-bottom: 16px;
+          line-height: 1.2;
         }
 
         .b-text {
@@ -131,18 +201,59 @@
         }
       }
 
-      @include max_768 {
-        .item-gallery {
-          margin-bottom: vw(35px);
+      @media (min-width: 768px) and (max-width: 960px) {
+        .article-thumb {
+          width: 45%;
+        }
+
+        .article-content {
+          .b-title {
+            font-size: 30px;
+            margin-bottom: 0;
+          }
+
+          .b-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+          }
         }
       }
+
+      @media (max-width: 767px) {
+        .article-gallery {
+          margin-bottom: vw(35px);
+        }
+
+        .article-gallery2 {
+          margin-bottom: vw(35px);
+        }
+
+        .article-content {
+          .b-category {
+            font-size: 20px;
+          }
+
+          .b-title {
+            font-size: 30px;
+            margin-bottom: 5px;
+          }
+
+          .b-text {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+
     }
 
-    & + .item {
+    & + .article {
       margin-top: 80px;
 
       @include max_768 {
-        margin-top: vw(80px);
+        margin-top: vw(65px);
       }
     }
   }
@@ -301,6 +412,19 @@
 }
 
 .page-linklist {
+  .main-content {
+    padding-top: 55px;
+  }
+
+  .heading-title {
+    font-family: $font-primary;
+    font-size: 45px;
+    font-weight: normal;
+    color: #1d2087;
+    text-align: center;
+    margin-bottom: 57px;
+  }
+
   .link-list {
     display: flex;
     flex-wrap: wrap;
@@ -354,6 +478,17 @@
     }
 
   }
+
+  @media (max-width: 768px) {
+    .main-content {
+      padding-top: 30px;
+    }
+
+    .heading-title {
+      margin-bottom: 35px;
+      font-size: 35px;
+    }
+  }
 }
 
 .page-jreast {
@@ -377,7 +512,7 @@
 
   .top-area {
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 90px;
 
     &__content {
 
@@ -429,6 +564,10 @@
             &:after {
               right: 12px;
             }
+
+            &:hover {
+              background: #dc000c;
+            }
           }
 
           & + li {
@@ -439,6 +578,7 @@
     }
 
     &__thumb {
+      position: relative;
       
       @include min_769 {
         width: cent(730px, 1080px);
@@ -449,6 +589,8 @@
       display: block;
 
       &__content {
+        margin-bottom: 30px;
+
         h2 {
           font-size: 25px;
         }
@@ -456,6 +598,29 @@
         .b-text {
           font-size: 16px;
           margin-bottom: 30px;
+        }
+      }
+    }
+
+    &:not(.bot-area) {
+     .top-area__thumb {
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: 1s;
+
+          &.map-first {
+            z-index: 1;
+            opacity: 1;
+          }
+
+          &.active {
+            z-index: 2;
+            opacity: 1;
+          }
         }
       }
     }
@@ -472,7 +637,7 @@
         }
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         margin-top: 50px;
       }
     }
