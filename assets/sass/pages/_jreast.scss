@@ -73,8 +73,12 @@
             }
 
             &:hover {
-              background: #dc000c;
               opacity: 1;
+              background: #1d2087;
+
+              @media (min-width: 1025px) {
+                background: #dc000c;
+              }
             }
 
             @media (max-width: 375px) {
