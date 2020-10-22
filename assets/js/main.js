@@ -25,12 +25,14 @@ $(function () {
                 fillColor: 'DC000B',
                 fillOpacity: 1,
             });
+            // $area
             $('.area')
                 .mouseover(function () {
                     $area.filter('[data-area="' + $(this).data('area') + '"]').trigger('mouseover');
+                    $(this).removeClass('hover');
                 })
                 .mouseout(function () {
-                    $area.filter('[data-area="' + $(this).data('area') + '"]').trigger('mouseout');
+                    $area.trigger('mouseout');
                 });
             $area
                 .mouseenter(function () {
@@ -39,31 +41,32 @@ $(function () {
                         .addClass('hover');
                 })
                 .mouseleave(function () {
-                    $('.area')
-                        .filter('[data-area="' + $(this).data('area') + '"]')
-                        .removeClass('hover');
+                    $('.area').removeClass('hover');
                 });
-        } else {
-            $('#image-map-sp').maphilight({
-                stroke: true,
-                strokeColor: 'ffffff',
-                fill: true,
-                fillColor: 'DC000B',
-                fillOpacity: 1,
-            });
-            $('.area').click(function () {
-                var $this = $(this);
 
+            $('.area, area').click(function () {
                 $area.trigger('mouseout');
-                if ($this.hasClass('active')) {
-                    $(this).removeClass('active');
-                    $area.filter('[data-area="' + $(this).data('area') + '"]').trigger('mouseout');
-                } else {
-                    $('.area').removeClass('active');
-                    $(this).addClass('active');
-                    $area.filter('[data-area="' + $(this).data('area') + '"]').trigger('mouseover');
-                }
             });
+        } else {
+            // $('#image-map-sp').maphilight({
+            //     stroke: true,
+            //     strokeColor: 'ffffff',
+            //     fill: true,
+            //     fillColor: 'DC000B',
+            //     fillOpacity: 1,
+            // });
+            // $('.area').click(function () {
+            //     var $this = $(this);
+            //     $area.trigger('mouseout');
+            //     if ($this.hasClass('active')) {
+            //         $(this).removeClass('active');
+            //         $area.filter('[data-area="' + $(this).data('area') + '"]').trigger('mouseout');
+            //     } else {
+            //         $('.area').removeClass('active');
+            //         $(this).addClass('active');
+            //         $area.filter('[data-area="' + $(this).data('area') + '"]').trigger('mouseover');
+            //     }
+            // });
         }
     });
 
@@ -81,5 +84,6 @@ $(function () {
     $('.gallery__see-more').click(function () {
         $(this).toggleClass('show');
         $(this).parent().toggleClass('show');
+        $(this).find('span').text() == 'See More' ? $(this).find('span').text('Close') : $(this).find('span').text('See More');
     });
 });

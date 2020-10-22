@@ -505,7 +505,7 @@
                         }
                     }
                     &__txt {
-                        font-size: 14px;
+                        // font-size: 14px;
                         color: #222222;
                         font-family: $ff-roboto;
                         @include resizefont(15px, 30px);
@@ -633,36 +633,50 @@
                         max-width: 616px;
                     }
                     .area {
-                        width: calc((100% / 3) - 2px);
-                        height: vw(133px);
-                        border-radius: vw(100px);
-                        background-color: #1d2087;
-                        font-size: 17px;
-                        color: #fff;
-                        @include dlflex;
-                        align-items: center;
-                        justify-content: center;
                         margin: 4px 1px;
-                        font-family: $ff-roboto;
-                        @include resizefont(13px, 26px);
+                        width: calc((100% / 3) - 2px);
                         @include min_769 {
-                            cursor: pointer;
                             width: 149px;
-                            height: 40px;
-                            border-radius: 20px;
                             margin: 2.5px;
                         }
-                        &.active {
-                            @include max_768 {
-                                background-color: #dc000c;
+                        a {
+                            height: vw(133px);
+                            background-color: #1d2087;
+                            font-size: 17px;
+                            color: #fff;
+                            @include dlflex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: $ff-roboto;
+                            @include resizefont(13px, 26px);
+                            border-radius: vw(100px);
+                            @include min_769 {
+                                height: 40px;
+                                border-radius: 20px;
                             }
                         }
+                        // &.active {
+                        //     @include max_768 {
+                        //         a {
+                        //             background-color: #dc000c;
+                        //         }
+                        //     }
+                        // }
                         &:hover,
                         &.hover {
                             @include min_769 {
-                                background-color: #dc000c;
+                                a {
+                                    opacity: 1;
+                                    background-color: #dc000c;
+                                }
                             }
                         }
+                        // a {
+                        //     &:focus {
+                        //         opacity: 1;
+                        //         background-color: #dc000c;
+                        //     }
+                        // }
                     }
                 }
             }
@@ -743,7 +757,7 @@
 }
 
 .noti-cookies {
-    background-color: #1d2087;
+    background-color: rgba(#1d2087, 0.7);
     color: #fff;
     width: 100%;
     position: fixed;
