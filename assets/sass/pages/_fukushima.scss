@@ -514,11 +514,10 @@
         }
     }
     .article-top {
-        padding-bottom: 80px;
+        margin-bottom: 80px;
 
         @media (min-width: 768px) {
             display: flex;
-            align-items: center;
         }
 
         .article-thumb {
@@ -530,6 +529,9 @@
 
         .article-content {
             flex: 1;
+            @media (min-width: 768px) {
+                margin-top: -7px;
+            }
 
             .b-title {
                 font-family: $font-primary;
@@ -546,6 +548,15 @@
                 font-weight: normal;
                 color: #333333;
                 line-height: 1.83;
+            }
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            .article-thumb {
+                margin-right: 0;
+                margin-left: cent(120px, 1080px);
             }
         }
 
@@ -567,13 +578,38 @@
             .article-thumb {
                 margin-bottom: vw(35px);
             }
+
+            &.reverse {
+                .article-thumb {
+                    margin-bottom: 0;
+                    margin-top: vw(35px);
+                }
+            }
+        }
+    }
+
+    .article-top-content-top, .article-top-content2 {
+        margin-bottom: 60px;
+
+        @media (max-width: 767px) {
+            margin-bottom: vw(60px);
+        }
+    }
+
+    .article-top-content3 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        @media (max-width: 767px) {
+            margin-top: vw(60px);
+            margin-bottom: vw(60px);
         }
     }
 
     .article-middle {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/article-middle-bg.jpg);
         background-repeat: no-repeat;
-        background-position: top center;
+        background-position: center;
         background-size: cover;
         padding: 75px 0;
         margin-bottom: 65px;
@@ -586,6 +622,10 @@
             line-height: 1.83;
             text-align: center;
             color: #ffffff;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         @media (max-width: 768px) {
@@ -634,6 +674,18 @@
                 font-style: normal;
                 line-height: 1.83;
                 color: #333333;
+
+                p {
+                    img {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+            p {
+                img {
+                    margin-bottom: 25px;
+                }
             }
         }
 

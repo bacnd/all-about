@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@import './helpers/variables';
+@import './helpers/mixins';
+@import './helpers/mixins_q';
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto; }
+  @media screen and (max-width: 768px) {
+    .container {
+      padding-left: 5.33333vw;
+      padding-right: 5.33333vw; } }
+
+.article-top {
+    margin-bottom: 80px;
+
+    @media (min-width: 768px) {
+        display: flex;
+    }
+
+    .article-thumb {
+        @media (min-width: 768px) {
+            width: cent(540px, 1080px);
+            margin-right: cent(120px, 1080px);
+        }
+    }
+
+    .article-content {
+        flex: 1;
+        @media (min-width: 768px) {
+            margin-top: -7px;
+        }
+
+        .b-title {
+            font-family: $font-primary;
+            font-size: 35px;
+            color: #1d2087;
+            margin-bottom: 20px;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .b-text {
+            font-family: $ff-roboto;
+            font-size: 18px;
+            font-weight: normal;
+            color: #333333;
+            line-height: 1.83;
+        }
+    }
+
+    &.reverse {
+        flex-direction: row-reverse;
+
+        .article-thumb {
+            margin-right: 0;
+            margin-left: cent(120px, 1080px);
+        }
+    }
+
+    @media (min-width: 767px) and (max-width: 1024px) {
+        .article-thumb {
+            margin-right: 25px;
+        }
+
+        .article-content {
+            .b-title {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: 35px;
+
+        .article-thumb {
+            margin-bottom: vw(35px);
+        }
+
+        &.reverse {
+            .article-thumb {
+                margin-bottom: 0;
+                margin-top: vw(35px);
+            }
+        }
+    }
+    }
+
+    .article-middle {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/article-middle-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 75px 0;
+    margin-bottom: 65px;
+
+    .a-content {
+        max-width: 430px;
+        @include auto;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.83;
+        text-align: center;
+        color: #ffffff;
+        min-height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 35px;
+        padding: vw(75px) 0;
+    }
+    }
