@@ -86,4 +86,10 @@ $(function () {
         $(this).parent().toggleClass('show');
         $(this).find('span').text() == 'See More' ? $(this).find('span').text('Close') : $(this).find('span').text('See More');
     });
+
+    $('.schedule__more-info').click(function () {
+        $(this).toggleClass('show');
+        $(this).parent().toggleClass('show');
+        $(this).parent().find('.location__contact').slideToggle();
+    });
 });
