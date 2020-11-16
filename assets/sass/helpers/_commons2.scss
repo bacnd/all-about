@@ -15,7 +15,7 @@
 
 .heading-page {
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
     background-size: cover;
 
     &__inner {
@@ -57,6 +57,7 @@
         font-weight: normal;
         color: #ffffff;
         text-align: center;
+        line-height: 1;
     }
 
     &__text {
@@ -70,11 +71,22 @@
         max-width: 580px;
     }
 
+    &__tag-wrap {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
     &__tag {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 10px;
+        margin-top: 25px;
         margin-bottom: 20px;
 
         li {
@@ -109,6 +121,14 @@
                 @include max_768 {
                     margin-right: 5px;
                 }
+            }
+        }
+
+        &:nth-child(2) {
+            margin-right: 20px;
+
+            @include max_768 {
+                margin-right: 5px;
             }
         }
     }
