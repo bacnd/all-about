@@ -71,6 +71,17 @@
         max-width: 580px;
     }
 
+    &__tag-wrap {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
     &__tag {
         display: flex;
         justify-content: center;
@@ -110,6 +121,14 @@
                 @include max_768 {
                     margin-right: 5px;
                 }
+            }
+        }
+
+        &:nth-child(2) {
+            margin-right: 20px;
+
+            @include max_768 {
+                margin-right: 5px;
             }
         }
     }
