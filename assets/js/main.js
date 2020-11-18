@@ -14,41 +14,43 @@ $(function () {
 
     var $area = $('area');
 
-    $('map').imageMapResize();
-    $(window).on('load', function (e) {
-        const wWidth = $(window).width();
-        if (wWidth > 768) {
-            $('#image-map').maphilight({
-                stroke: true,
-                strokeColor: 'ffffff',
-                fill: true,
-                fillColor: 'DC000B',
-                fillOpacity: 1,
-            });
-            // $area
-            $('.area')
-                .mouseover(function () {
-                    $area.filter('[data-area="' + $(this).data('area') + '"]').trigger('mouseover');
-                    $(this).removeClass('hover');
-                })
-                .mouseout(function () {
+    if ($area[0]) {
+        $('map').imageMapResize();
+        $(window).on('load', function (e) {
+            const wWidth = $(window).width();
+            if (wWidth > 768) {
+                $('#image-map').maphilight({
+                    stroke: true,
+                    strokeColor: 'ffffff',
+                    fill: true,
+                    fillColor: 'DC000B',
+                    fillOpacity: 1,
+                });
+                // $area
+                $('.area')
+                    .mouseover(function () {
+                        $area.filter('[data-area="' + $(this).data('area') + '"]').trigger('mouseover');
+                        $(this).removeClass('hover');
+                    })
+                    .mouseout(function () {
+                        $area.trigger('mouseout');
+                    });
+                $area
+                    .mouseenter(function () {
+                        $('.area')
+                            .filter('[data-area="' + $(this).data('area') + '"]')
+                            .addClass('hover');
+                    })
+                    .mouseleave(function () {
+                        $('.area').removeClass('hover');
+                    });
+
+                $('.area, area').click(function () {
                     $area.trigger('mouseout');
                 });
-            $area
-                .mouseenter(function () {
-                    $('.area')
-                        .filter('[data-area="' + $(this).data('area') + '"]')
-                        .addClass('hover');
-                })
-                .mouseleave(function () {
-                    $('.area').removeClass('hover');
-                });
-
-            $('.area, area').click(function () {
-                $area.trigger('mouseout');
-            });
-        }
-    });
+            }
+        });
+    }
 
     $('.accordion-toggle').click(function (e) {
         var $this = $(this);
