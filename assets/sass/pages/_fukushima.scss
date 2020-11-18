@@ -79,7 +79,7 @@
     }
 }
 
-.fukushima-list {
+.fukushima-list, .article-list2 {
     .article {
         .article-inner {
             @media (min-width: 768px) {
@@ -843,6 +843,47 @@
             .btn-primary {
                 width: 100%;
                 min-width: 100%;
+            }
+        }
+    }
+}
+
+.page-tag {
+    .heading-page {
+        background: rgba(#1d2087,0.5);
+
+        &__title {
+            position: relative;
+            padding-left: 53px;
+
+            &:before {
+                content: '';
+                display: block;
+                background: url('../images/icon-title-tag.svg') no-repeat;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__tag {
+            max-width: 800px;
+
+            li {
+                a {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            &__inner {
+                height: auto;
+                padding-top: 25vw;
+                padding-bottom: 7vw;
             }
         }
     }

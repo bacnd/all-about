@@ -3,12 +3,16 @@
   .heading-page {
 
     &__inner {
-      height: 370px;
+      height: auto;
+      min-height: 370px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     @media (max-width: 768px) {
       &__inner {
-        // height: vw(700px);
+        padding-top: vw(140px);
+        padding-bottom: vw(60px);
       }
     }
   }
@@ -34,6 +38,7 @@
         font-weight: normal;
         line-height: 1.29;
         color: #1d2087;
+        margin-bottom: 35px;
       }
 
       .b-text {
@@ -104,12 +109,17 @@
       
       @include min_769 {
         width: cent(730px, 1080px);
+        height: 600px;
       }
 
       @media (min-width: 865px) and (max-width: 1024px) {
         img {
           height: 100%;
         }
+      }
+
+      @media (min-width: 769px) and (max-width: 865px) {
+        height: 460px;
       }
     }
 
