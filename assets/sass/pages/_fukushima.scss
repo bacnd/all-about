@@ -79,7 +79,8 @@
     }
 }
 
-.fukushima-list, .article-list2 {
+.fukushima-list,
+.article-list2 {
     .article {
         .article-inner {
             @media (min-width: 768px) {
@@ -183,6 +184,7 @@
                     color: #1d2087;
                     margin-bottom: 16px;
                     line-height: 1.2;
+                    font-weight: normal;
                 }
 
                 .b-text {
@@ -301,7 +303,7 @@
                 justify-content: center;
                 flex-direction: column;
                 @include plr(5px);
-                padding-bottom: 67px;
+                // padding-bottom: 67px;
             }
 
             &__city {
@@ -590,7 +592,8 @@
         }
     }
 
-    .article-top-content-top, .article-top-content2 {
+    .article-top-content-top,
+    .article-top-content2 {
         margin-bottom: 60px;
 
         @media (max-width: 767px) {
@@ -850,7 +853,7 @@
 
 .page-tag {
     .heading-page {
-        background: rgba(#1d2087,0.5);
+        background: rgba(#1d2087, 0.5);
 
         &__title {
             position: relative;
