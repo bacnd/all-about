@@ -1,227 +1,226 @@
 .page-covid {
-  font-family: $ff-roboto;
+    font-family: $ff-roboto;
 
-  .heading-page {
-    &__inner {
-      height: 400px;
-    }
+    .heading-page {
+        &__inner {
+            height: 400px;
+        }
 
-    &__text {
-      margin-top: 25px;
-      max-width: 650px;
-    }
-
-    @media (min-width: 568px) and (max-width: 800px) {
-      &__inner {
-        height: 500px;
-        padding-top: 8.5vw;
-      }
-    }
-  }
-
-  .a-content-top {
-    max-width: 794px;
-    margin: 0 auto 67px;
-
-    h2 {
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
-      color: #1d2087;
-      margin-bottom: 30px;
-    }
-
-    p {
-      font-size: 21px;
-      font-weight: normal;
-      text-align: center;
-      color: #1d2087;
-    }
-
-    @media (max-width: 480px) {
-      h2 {
-        font-size: 28px;
-        line-height: 1.3;
-      }
-    }
-  }
-
-  .note-list {
-    max-width: 730px;
-    @include auto;
-    margin-bottom: 125px;
-
-    .note {
-      display: flex;
-      align-items: center;
-
-      &__icon {
-        width: 80px;
-        height: 80px;
-        border-radius: 5px;
-        background: #1d2087;
-        margin-right: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      &__text {
-        flex: 1;
-        line-height: 1.3; 
-        font-size: 21px;
-        font-weight: bold;
-        color: #1d2087;
-      }
-
-      & + .note {
-        margin-top: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      max-width: 100%;
-      margin-bottom: 50px;
-
-      .note {
         &__text {
-          font-size: 18px;
-        }
-      }
-    }
-  }
-
-  .area-text {
-    h3 {
-      font-size: 30px;
-      font-weight: bold;
-      color: #1d2087;
-      margin-bottom: 25px;
-      padding-left: 45px;
-      position: relative;
-
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 6px;
-        left: 0;
-      }
-    }
-
-    ul {
-      @media (min-width: 481px) {
-        margin-left: 45px;
-      }
-
-      li {
-        font-size: 21px;
-        color: #333;
-        padding-left: 22px;
-        position: relative;
-        line-height: 1.3;
-
-        &:before {
-          content: "▶";
-          display: block;
-          font-size: 10px;
-          position: absolute;
-          top: 7px;
-          left: 0;
+            margin-top: 25px;
+            max-width: 650px;
         }
 
-        & + li {
-          margin-top: 18px;
+        @media (min-width: 568px) and (max-width: 800px) {
+            &__inner {
+                height: 500px;
+                padding-top: 8.5vw;
+            }
         }
-      }
-
-      @media (max-width: 480px) {
-        li {
-          font-size: 18px;
-
-          & + li {
-            margin-top: 10px;
-          }
-        }
-      }
     }
 
-    &.area-text-0 {
-      h3 {
-        &:before {
-          background: url('../images/covid/icon-title-0.svg') no-repeat;
-          width: 31px;
-          height: 26px;
+    .a-content-top {
+        // max-width: 794px;
+        margin: 0 auto 67px;
+
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            color: #1d2087;
+            margin-bottom: 30px;
         }
-      }
-    }
-    &.area-text-1 {
-      h3 {
-        &:before {
-          background: url('../images/covid/icon-title-1.svg') no-repeat;
-          width: 29px;
-          height: 29px;
+
+        p {
+            font-size: 21px;
+            font-weight: normal;
+            // text-align: center;
+            color: #1d2087;
         }
-      }
-    }
-    &.area-text-2 {
-      h3 {
-        &:before {
-          background: url('../images/covid/icon-title-2.svg') no-repeat;
-          width: 23px;
-          height: 30px;
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 28px;
+                line-height: 1.3;
+            }
         }
-      }
-    }
-    &.area-text-3 {
-      h3 {
-        &:before {
-          background: url('../images/covid/icon-title-3.svg') no-repeat;
-          width: 30px;
-          height: 20px;
-          top: 12px;
-        }
-      }
-    }
-    &.area-text-4 {
-      h3 {
-        &:before {
-          background: url('../images/covid/icon-title-4.svg') no-repeat;
-          width: 28px;
-          height: 24px;
-          top: 10px;
-        }
-      }
-    }
-    &.area-text-5 {
-      h3 {
-        &:before {
-          background: url('../images/covid/icon-title-5.svg') no-repeat;
-          width: 30px;
-          height: 30px;
-        }
-      }
     }
 
-    & + .area-text {
-      margin-top: 70px;
-    }
+    .note-list {
+        max-width: 730px;
+        @include auto;
+        margin-bottom: 125px;
 
-    @media (max-width: 480px) {
-      & + .area-text {
-        margin-top: 35px;
-      }
+        .note {
+            display: flex;
+            align-items: center;
 
-      h3 {
-        font-size: 25px;
-        padding-left: 30px;
-        margin-bottom: 20px;
+            &__icon {
+                width: 80px;
+                height: 80px;
+                border-radius: 5px;
+                background: #1d2087;
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-        &:before {
-          background-size: 75% !important;
+            &__text {
+                flex: 1;
+                line-height: 1.3;
+                font-size: 21px;
+                font-weight: bold;
+                color: #1d2087;
+            }
+
+            & + .note {
+                margin-top: 20px;
+            }
         }
-      }
+
+        @media (max-width: 480px) {
+            max-width: 100%;
+            margin-bottom: 50px;
+
+            .note {
+                &__text {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 
-  }
+    .area-text {
+        h3 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #1d2087;
+            margin-bottom: 25px;
+            padding-left: 45px;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: 0;
+            }
+        }
+
+        ul {
+            @media (min-width: 481px) {
+                margin-left: 45px;
+            }
+
+            li {
+                font-size: 21px;
+                color: #333;
+                padding-left: 22px;
+                position: relative;
+                line-height: 1.3;
+
+                &:before {
+                    content: '▶';
+                    display: block;
+                    font-size: 10px;
+                    position: absolute;
+                    top: 7px;
+                    left: 0;
+                }
+
+                & + li {
+                    margin-top: 18px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                li {
+                    font-size: 18px;
+
+                    & + li {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        &.area-text-0 {
+            h3 {
+                &:before {
+                    background: url('../images/covid/icon-title-0.svg') no-repeat;
+                    width: 31px;
+                    height: 26px;
+                }
+            }
+        }
+        &.area-text-1 {
+            h3 {
+                &:before {
+                    background: url('../images/covid/icon-title-1.svg') no-repeat;
+                    width: 29px;
+                    height: 29px;
+                }
+            }
+        }
+        &.area-text-2 {
+            h3 {
+                &:before {
+                    background: url('../images/covid/icon-title-2.svg') no-repeat;
+                    width: 23px;
+                    height: 30px;
+                }
+            }
+        }
+        &.area-text-3 {
+            h3 {
+                &:before {
+                    background: url('../images/covid/icon-title-3.svg') no-repeat;
+                    width: 30px;
+                    height: 20px;
+                    top: 12px;
+                }
+            }
+        }
+        &.area-text-4 {
+            h3 {
+                &:before {
+                    background: url('../images/covid/icon-title-4.svg') no-repeat;
+                    width: 28px;
+                    height: 24px;
+                    top: 10px;
+                }
+            }
+        }
+        &.area-text-5 {
+            h3 {
+                &:before {
+                    background: url('../images/covid/icon-title-5.svg') no-repeat;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        & + .area-text {
+            margin-top: 70px;
+        }
+
+        @media (max-width: 480px) {
+            & + .area-text {
+                margin-top: 35px;
+            }
+
+            h3 {
+                font-size: 25px;
+                padding-left: 30px;
+                margin-bottom: 20px;
+
+                &:before {
+                    background-size: 75% !important;
+                }
+            }
+        }
+    }
 }
