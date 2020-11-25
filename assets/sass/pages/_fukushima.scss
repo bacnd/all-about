@@ -523,6 +523,10 @@
         }
 
         .article-thumb {
+            img {
+                width: 100%;
+            }
+
             @media (min-width: 768px) {
                 width: cent(540px, 1080px);
                 margin-right: cent(120px, 1080px);
@@ -887,6 +891,22 @@
                 height: auto;
                 padding-top: 25vw;
                 padding-bottom: 7vw;
+            }
+        }
+
+        @media (max-width: 567px) {
+            &__inner {
+                padding-top: 28vw;
+            }
+            &__title {
+                font-size: vw(65px);
+                padding-left: 35px;
+
+                &:before {
+                    background-size: 100% !important;
+                    width: 25px;
+                    height: 25px;
+                }
             }
         }
     }

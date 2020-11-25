@@ -137,16 +137,51 @@
             padding-top: vw(45px);
             padding-bottom: vw(45px);
         }
+
+        &__title {
+            font-size: vw(70px);
+        }
+
+        &__tag-wrap {
+            ul {
+
+                margin-top: 0;
+                margin-bottom: 0;
+
+                &:nth-child(1) {
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-top: 25px;
+                    margin-bottom: 0;
+                }
+                &:nth-child(2) {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+                &:nth-child(3) {
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-top: 0;
+                }
+            }
+        }
     }
 
     @media (max-width: 567px) {
         &__title {
-            font-size: 35px;
             margin-bottom: vw(10px);
         }
 
         &__text {
             font-size: 16px;
+        }
+
+        &__tag {
+            @include mlr(-5px);
+
+            li {
+                @include plr(5px);
+            }
         }
     }
 }
