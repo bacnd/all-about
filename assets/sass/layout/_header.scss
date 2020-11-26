@@ -42,6 +42,7 @@
                 font-family: $ff-roboto;
                 width: 0;
                 padding-top: vw(132px);
+                padding-bottom: vw(160px);
                 overflow-y: scroll;
                 max-height: 100vh;
             }
@@ -73,6 +74,57 @@
                         padding-left: vw(70px);
                         @include dlflex;
                         align-items: center;
+                        width: calc(100% - 13vw);
+                    }
+                }
+                &.has-submenu {
+                    > a {
+                        position: relative;
+                        &::after {
+                            content: '▶';
+                            position: absolute;
+                            font-size: 8px;
+                            font-family: $ff-roboto;
+                            top: 2px;
+                            bottom: -2px;
+                            right: -11px;
+                            margin: auto;
+                            transform: rotate(90deg);
+                            @include resizefont(10px, 20px);
+                            @include max_768 {
+                                color: #1d2087;
+                            }
+                        }
+                    }
+                }
+                .sub-menu {
+                    top: 60px;
+                    z-index: 1;
+                    min-width: 169px;
+                    display: none;
+                    @include min_769 {
+                        position: absolute;
+                        background-color: #1d2087;
+                        padding: 20px;
+                    }
+                    li {
+                        line-height: 2.3;
+                        a {
+                            opacity: 0.5;
+                            font-size: 16px;
+                            @include resizefont(16px, 32px);
+                            @include max_768 {
+                                min-height: vw(80px);
+                                height: auto;
+                                padding-left: vw(100px);
+                            }
+                            &:hover {
+                                opacity: 0.4;
+                            }
+                        }
+                    }
+                    &.active {
+                        display: block;
                     }
                 }
             }
