@@ -702,7 +702,7 @@
                 justify-content: space-between;
             }
             .link-list__txt {
-                max-width: 604px;
+                max-width: 650px;
                 width: 100%;
             }
             .link-list__title {
@@ -714,16 +714,16 @@
                 @include min_769 {
                     font-weight: normal;
                     font-family: $ff-staatliches;
-                    width: 151px;
+                    width: 250px;
                     word-break: keep-all;
                 }
             }
             p {
                 line-height: 1.5;
                 color: #1d2087;
-                max-width: calc(100% - 200px);
+                max-width: calc(100% - 300px);
                 width: 100%;
-                margin-left: 49px;
+                margin-left: 40px;
                 @include max_768 {
                     display: none;
                 }
