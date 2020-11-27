@@ -48,6 +48,21 @@ $(function () {
                 $('.area, area').click(function () {
                     $area.trigger('mouseout');
                 });
+
+                var userAgent, ieReg, ie;
+                userAgent = window.navigator.userAgent;
+                ieReg = /msie|Trident.*rv[ :]*11\./gi;
+                ie = ieReg.test(userAgent);
+
+                if (ie) {
+                    $('.grid .category').each(function () {
+                        var $container = $(this),
+                            imgUrl = $container.find('img.dl-pc').prop('src');
+                        if (imgUrl) {
+                            $container.css('backgroundImage', 'url(' + imgUrl + ')').addClass('custom-object-fit');
+                        }
+                    });
+                }
             }
         });
     }
