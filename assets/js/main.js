@@ -75,13 +75,14 @@ $(function () {
         $(this).parent().find('.location__contact').slideToggle();
     });
 
-    $('.has-submenu > a').click(function (e) {
+    $('.has-submenu .menu-toggle').on('click', function (e) {
         e.preventDefault();
-        if ($(this).next('.sub-menu').hasClass('active')) {
-            $(this).next('.sub-menu').toggleClass('active');
-        } else {
-            $('.sub-menu').removeClass('active');
-            $(this).next('.sub-menu').toggleClass('active');
-        }
-    });
+        $('.sub-menu').not($(this).next()).removeClass('active');
+        $(this).next().toggleClass('active');
+    }),
+        $(document).on('click', function (e) {
+            if (!$(e.target).hasClass('menu-toggle')) {
+                $('.sub-menu.active').removeClass('active');
+            }
+        });
 });
