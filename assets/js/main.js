@@ -8,8 +8,15 @@ $(function () {
         $('body').toggleClass('show-menu');
     });
 
+    if (!$.cookie('notice-accepted')) {
+        $('.noti-cookies').show();
+    } else {
+        $('.noti-cookies').hide();
+    }
+
     $('.btn-accept').click(function (e) {
         $('.noti-cookies').hide();
+        $.cookie('notice-accepted', 1, { expires: 20, path: '/' });
     });
 
     var $area = $('area');

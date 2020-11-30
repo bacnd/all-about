@@ -43,7 +43,7 @@
             .fv-caption__txt {
                 color: $clr-white;
                 text-shadow: 0 0 6px #000000;
-                font-size: 24px;
+                font-size: 22px;
                 line-height: 1.58;
                 z-index: 1;
                 margin: auto;
@@ -241,7 +241,7 @@
                         height: 500px;
                     }
                     &__name {
-                        font-size: 48px;
+                        font-size: 46px;
                         line-height: 1.25;
                         @include resizefont(26px, 52px);
                         @media screen and (min-width: 1201px) {
@@ -252,10 +252,10 @@
                         }
                     }
                     &__txt {
-                        font-size: 18px;
-                        line-height: 1.56;
+                        // font-size: 16px;
+                        line-height: 1.45;
                         text-align: left;
-                        margin-top: 35px;
+                        margin-top: 25px;
                         max-width: 85%;
                         width: 100%;
                         @include mlrauto;
@@ -288,6 +288,7 @@
                                 background-color: #fff;
                                 color: #000000;
                                 opacity: 1;
+                                mix-blend-mode: screen;
                             }
                         }
 
@@ -325,14 +326,14 @@
                                 transform: scale(1);
                             }
                             .category__name {
-                                -webkit-transform: translate3d(0, 72px, 0);
-                                transform: translate3d(0, 72px, 0);
+                                -webkit-transform: translate3d(0, 52px, 0);
+                                transform: translate3d(0, 52px, 0);
                             }
                             p,
                             a {
                                 opacity: 1;
-                                -webkit-transform: translate3d(0, 72px, 0) scale(1);
-                                transform: translate3d(0, 72px, 0) scale(1);
+                                -webkit-transform: translate3d(0, 52px, 0) scale(1);
+                                transform: translate3d(0, 52px, 0) scale(1);
                             }
                         }
                     }
