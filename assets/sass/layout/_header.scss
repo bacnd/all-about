@@ -20,6 +20,11 @@
                 @include max_768 {
                     width: vw(145px);
                 }
+                a {
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
             }
         }
         .hd-menu {
@@ -110,7 +115,6 @@
                     li {
                         line-height: 2.3;
                         a {
-                            opacity: 0.5;
                             font-size: 16px;
                             @include resizefont(16px, 32px);
                             @include max_768 {
@@ -119,7 +123,7 @@
                                 padding-left: vw(100px);
                             }
                             &:hover {
-                                opacity: 0.4;
+                                opacity: 0.5;
                             }
                         }
                     }
