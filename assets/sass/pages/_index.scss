@@ -146,11 +146,14 @@
             &.btn-red {
                 background-color: #dc000c;
                 &:hover {
-                    background-color: #ff111e;
+                    background-color: #1d2087;
                 }
             }
             &.btn-blue {
                 background-color: #1d2087;
+                &:hover {
+                    background-color: #dc000c;
+                }
             }
         }
         &.box-category {
@@ -769,9 +772,9 @@
                         margin: auto;
                     }
                 }
-                &:hover {
-                    background-color: #000484;
-                }
+                // &:hover {
+                //     background-color: #dc000c;
+                // }
             }
         }
     }
