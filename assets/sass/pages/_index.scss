@@ -529,10 +529,10 @@
                         }
                     }
                     &__txt {
-                        // font-size: 14px;
-                        color: #222222;
-                        font-family: $ff-roboto;
-                        @include resizefont(15px, 30px);
+                        font-size: 18px;
+                        color: #1d2087;
+                        font-family: $ff-staatliches;
+                        @include resizefont(16px, 32px);
                         margin-top: 7px;
                     }
                 }
