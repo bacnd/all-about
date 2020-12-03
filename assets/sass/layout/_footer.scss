@@ -51,7 +51,8 @@
         .middle-ft {
             width: 100%;
             @include min_769 {
-                max-width: 420px;
+                max-width: 500px;
+                margin-right: 20px;
             }
             .middle-ft__inner {
                 @include max_768 {
@@ -96,6 +97,10 @@
                 width: 100%;
                 @include min_769 {
                     max-width: 140px;
+                    margin-right: 10px;
+                    &:last-of-type {
+                        max-width: 210px;
+                    }
                 }
                 @include max_768 {
                     margin-bottom: vw(70px);
@@ -130,7 +135,7 @@
             width: 100%;
             padding: 0 vw(40px) vw(75px);
             @include min_769 {
-                max-width: 295px;
+                max-width: 180px;
                 padding: 0;
             }
             .orther-pages,
