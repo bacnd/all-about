@@ -126,6 +126,11 @@
                         }
                         a {
                             color: #999999;
+
+                            &:hover {
+                                color: #1D2087;
+                                opacity: 1;
+                            }
                         }
                     }
                 }
@@ -174,7 +179,11 @@
                     }
                     .social {
                         img {
+                            width: 30px;
+                            height: 30px;
+                            
                             @include max_768 {
+                                width: vw(60px);
                                 height: vw(60px);
                             }
                         }
