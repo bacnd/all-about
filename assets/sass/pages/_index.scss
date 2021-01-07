@@ -359,11 +359,12 @@
             }
             .courses__list {
                 margin-top: vw(26px);
-                justify-content: space-between;
-                flex-wrap: wrap;
+                // justify-content: space-between;
+                flex-flow: row wrap;
                 @include min_769 {
                     margin-top: 41px;
-                    flex-wrap: nowrap;
+                    // flex-wrap: nowrap;
+                    justify-content: flex-start;
                 }
                 .course {
                     color: $clr-white;
@@ -372,8 +373,13 @@
                     position: relative;
                     @include min_769 {
                         max-width: 240px;
-                        & + .course {
-                            margin-left: 10px;
+                        flex: 0 0 23%;
+                        margin-bottom: 40px;
+                        &:not(:nth-of-type(4n - 3)) {
+                            margin-left: 3.7%;
+                        }
+                        @media (min-width: 769px) and (max-width: 1080 + 30 +'px') {
+                            flex: 0 0 22.2%;
                         }
                     }
 
